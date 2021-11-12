@@ -25,9 +25,9 @@ while True:
             for id, lm in enumerate(handLms.landmark):
                 h, w, c = img.shape
                 cx, cy = int(lm.x*w), int(lm.y*h) # All 21 landmark points
-                print(id, cx, cy)
-                if id == 0:
-                    cv2.circle(img, (cx, cy), 25, (255,0,255), cv2.FILLED)
+                # print(id, cx, cy)
+                # if id == 0:
+                #     cv2.circle(img, (cx, cy), 25, (255,0,255), cv2.FILLED) # Print a purple circle onto wrist (landmark 0)
             mpDraw.draw_landmarks(img, handLms, mpHands.HAND_CONNECTIONS) # We draw into BGR img because that is what we are displaying
 
     cTime = time.time()
